@@ -601,6 +601,10 @@ def do_quota_class_show(cs, args):
            metavar='<gigabytes>',
            type=int, default=None,
            help='New value for the "gigabytes" quota.')
+@utils.arg('--volume-type',
+           metavar='<volume_type_name>',
+           default=None,
+           help='Volume type (Optional, Default=None)')
 @utils.service_type('volume')
 def do_quota_class_update(cs, args):
     """Update the quotas for a quota class."""
